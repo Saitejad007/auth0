@@ -34,19 +34,32 @@ body {
 
 .card {
   /* width: fit-content; */
-  max-width: 300px;
+  max-width: 360px;
 }
 
 .card::before {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   content: "";
   position: absolute;
   background-color: rgb(99, 93, 255);
   z-index: -1;
   border-radius: 50%;
-  left: 100px;
-  top: 50px;
+  right: 0px;
+  bottom: 0px;
+  transition: all 1s;
+}
+
+.card::after {
+  width: 150px;
+  height: 150px;
+  content: "";
+  position: absolute;
+  background-color: rgb(99, 93, 255);
+  z-index: -1;
+  border-radius: 50%;
+  left: 0px;
+  top: 0px;
   transition: all 1s;
 }
 
@@ -62,10 +75,14 @@ body {
   border-radius: 10px;
   backdrop-filter: blur(30px);
   background-color: rgba(65, 65, 65, 0.308);
-  border: 1px solid rgba(99, 93, 255, 0.289);
+  border: 1px solid rgba(99, 93, 255, 0.589);
   cursor: pointer;
 }
 
 .card:hover::before {
-  transform: translate(-50px, 50px);
+  transform: translate(-50px, -50px);
+}
+
+.card:hover::after {
+  transform: translate(60px, 60px);
 }
