@@ -1,5 +1,6 @@
 "use client";
 
+import ChatWindow from "@/components/ChatWindow";
 import Logout from "@/components/Logout";
 import Navbar from "@/components/Navbar";
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0/client";
@@ -20,8 +21,8 @@ const Chats = (props: Props) => {
           <div className="flex min-w-screen h-screen flex-col">
             <Navbar />
 
-            <div className="flex h-full w-full flex-col py-28 px-44">
-              <h1 className="text-5xl font-normal leading-loose">
+            <div className="flex h-full w-full flex-col py-10 px-44">
+              {/* <h1 className="text-5xl font-normal leading-loose">
                 Welcome,
                 <br />{" "}
                 <span className="font-extrabold block leading-10">
@@ -37,7 +38,8 @@ const Chats = (props: Props) => {
                   Profile
                 </Link>
                 <Logout />
-              </div>
+              </div> */}
+              <ChatWindow />
             </div>
           </div>
         </>
