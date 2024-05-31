@@ -5,13 +5,13 @@ import Logout from "@/components/Logout";
 import Navbar from "@/components/Navbar";
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 
 type Props = {};
 
 const Chats = (props: Props) => {
   const { user, error, isLoading } = useUser();
-  console.log(user);
+
   return (
     <>
       {isLoading ? (

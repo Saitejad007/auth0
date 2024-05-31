@@ -19,6 +19,7 @@ const ChatHeader = (props: Props) => {
           <p className="text-xs">online</p>
         </div>
       </div>
+      
       <div className="flex justify-center items-center justify-self-end">
         <Button
           isIconOnly
